@@ -1,5 +1,10 @@
 <?php 
-    $var = "Someone"
+    session_start();
+    if($_SESSION["logged_in"] == true) {
+        $status = "Logged in."
+    } else {
+        $status = "Not logged in."
+    }
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +17,7 @@
 </head>
 <body>
     <h1>Hello <?= $var?> !</h1>
+    <h2>Status: <?= $status?> </h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ratione vero sapiente. Deserunt nesciunt assumenda, tempora perspiciatis at odit voluptatum. Quam labore explicabo voluptates, facere qui consequuntur ut itaque aliquid!</p>
 </body>
 </html>
