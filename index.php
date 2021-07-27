@@ -6,6 +6,12 @@
     } else {
         $status = "Not logged in.";
     }
+
+    $role = null;
+    if (isset($_SESSION["role"])) {
+        $role = $_SESSION["role"];
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +25,7 @@
 <body>
     <h1>Hello <?= $var?> !</h1>
     <h2>Status: <?= $status?> </h2>
+    <h3>Role: <?= $role?> </h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ratione vero sapiente. Deserunt nesciunt assumenda, tempora perspiciatis at odit voluptatum. Quam labore explicabo voluptates, facere qui consequuntur ut itaque aliquid!</p>
 </body>
 </html>
