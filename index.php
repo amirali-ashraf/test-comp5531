@@ -1,9 +1,10 @@
 <?php 
     session_start();
-    if($_SESSION["logged_in"] == true) {
-        $status = "Logged in."
+    $var = 'Someone';
+    if(isset($_SESSION["logged_in"]) &&  $_SESSION["logged_in"] == true) {
+        $status = "Logged in.";
     } else {
-        $status = "Not logged in."
+        $status = "Not logged in.";
     }
 ?>
 
